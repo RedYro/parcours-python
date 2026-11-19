@@ -18,3 +18,30 @@ Pour lancer (depuis ce dossier, venv activé) : python exercice.py
 """
 
 # Ton code ici
+while True:
+    choix_temp = input("Tapez 1 pour convertir °C en °F, 2 pour convertir °F en °C : ")
+
+    if choix_temp == "1":
+        unite = "°F"
+        print("Conversion °C en °F")
+        break
+    elif choix_temp == "2":
+        unite = "°C"
+        print("Conversion °F en °C")
+        break
+    else:
+        print("Saisie inconnue, choisissez entre le chiffre 1 ou 2")
+
+while True:
+    try:
+        choix_nombre_temp = float(input("Saisissez votre température : "))
+        break
+    except ValueError:
+        print(
+            "La saisie n'est pas valide, essayez avec un point à la place de la virgule"
+        )
+
+if choix_temp == "1":
+    print(f"{round(choix_nombre_temp * 9 / 5 + 32, 1)} {unite}")
+else:
+    print(f"{round((choix_nombre_temp - 32) * 5 / 9, 1)} {unite}")

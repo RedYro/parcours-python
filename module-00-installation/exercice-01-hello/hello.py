@@ -13,3 +13,5 @@ Pour lancer (depuis ce dossier, venv activé) : python hello.py
 """
 
 # Ton code ici
+prenom = input("Quel est votre prénom ? ")
+print(f"Vous vous appelez {prenom}")
